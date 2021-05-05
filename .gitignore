@@ -1,0 +1,6 @@
+.env
+*.png
+*.gif
+*.webm
+*0.json
+notes.md

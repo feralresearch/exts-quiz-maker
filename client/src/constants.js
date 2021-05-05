@@ -1,0 +1,4 @@
+export const API = {
+  STREAMBOX_MGR: "STREAMBOX_MGR",
+  USER_MANAGER: "USER_MANAGER",
+};
