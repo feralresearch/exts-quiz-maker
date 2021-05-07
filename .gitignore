@@ -4,3 +4,4 @@
 *.webm
 *0.json
 notes.md
+node_modules

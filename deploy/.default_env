@@ -1,0 +1,3 @@
+REACT_APP_STREAM_MGR=https://stream.example.com/mgr
+REACT_APP_STREAM_SERVICE=https://stream.example.com
+REACT_APP_USER_SERVICE=https://stream.example.com/login
