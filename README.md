@@ -1,8 +1,9 @@
 # [Quiz Maker](https://tezcatlipoca.github.io/exts-quiz-maker/)
 
+React App (CRA)  
 Viewer and editor for EXTS formatted quiz files (HTML wrapped markdown).
 
-Available here: [https://tezcatlipoca.github.io/exts-quiz-maker/](https://tezcatlipoca.github.io/exts-quiz-maker/)
+Live here: [https://tezcatlipoca.github.io/exts-quiz-maker/](https://tezcatlipoca.github.io/exts-quiz-maker/)
 
 ## Deploy
 
