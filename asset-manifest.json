@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.48519be4.chunk.css",
-    "main.js": "/static/js/main.f335ecaf.chunk.js",
-    "main.js.map": "/static/js/main.f335ecaf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.df8c94fa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.df8c94fa.js.map",
-    "static/js/2.39897059.chunk.js": "/static/js/2.39897059.chunk.js",
-    "static/js/2.39897059.chunk.js.map": "/static/js/2.39897059.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.48519be4.chunk.css.map": "/static/css/main.48519be4.chunk.css.map",
-    "static/js/2.39897059.chunk.js.LICENSE.txt": "/static/js/2.39897059.chunk.js.LICENSE.txt"
+    "main.css": "/exts-quiz-maker/static/css/main.48519be4.chunk.css",
+    "main.js": "/exts-quiz-maker/static/js/main.321c8db0.chunk.js",
+    "main.js.map": "/exts-quiz-maker/static/js/main.321c8db0.chunk.js.map",
+    "runtime-main.js": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js",
+    "runtime-main.js.map": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js.map",
+    "static/js/2.39897059.chunk.js": "/exts-quiz-maker/static/js/2.39897059.chunk.js",
+    "static/js/2.39897059.chunk.js.map": "/exts-quiz-maker/static/js/2.39897059.chunk.js.map",
+    "index.html": "/exts-quiz-maker/index.html",
+    "static/css/main.48519be4.chunk.css.map": "/exts-quiz-maker/static/css/main.48519be4.chunk.css.map",
+    "static/js/2.39897059.chunk.js.LICENSE.txt": "/exts-quiz-maker/static/js/2.39897059.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df8c94fa.js",
+    "static/js/runtime-main.09ee3cdd.js",
     "static/js/2.39897059.chunk.js",
     "static/css/main.48519be4.chunk.css",
-    "static/js/main.f335ecaf.chunk.js"
+    "static/js/main.321c8db0.chunk.js"
   ]
 }
