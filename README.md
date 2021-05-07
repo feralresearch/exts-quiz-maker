@@ -6,7 +6,11 @@ Available here: [https://tezcatlipoca.github.io/exts-quiz-maker/](https://tezcat
 
 ## Deploy
 
-Hosted on Github pages, to push latest run `yarn deploy`
+Hosted on Github Page
+
+- To push latest run `yarn deploy`
+- If GH Pages 404s:
+  `git commit --allow-empty -m "Trigger rebuild"; git push`
 
 ## Credit
 
