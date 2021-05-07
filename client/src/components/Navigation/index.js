@@ -12,9 +12,10 @@ export default Navigation;
 
 const styles = {
   container: {
+    color: "#d30a09",
     fontFamily: "Mulish",
     textTransform: "uppercase",
-    backgroundColor: "black",
+    backgroundColor: "white",
     position: "fixed",
     width: "100%",
     textAlign: "left",
@@ -23,6 +24,8 @@ const styles = {
     flexDirection: "row",
     fontSize: "1.5rem",
     alignItems: "center",
+    borderTop: ".2rem solid #d30a09",
+    borderBottom: ".01rem solid #dee2e6",
   },
   infoLabel: { fontWeight: 200, marginRight: ".5rem" },
   infoBlock: {
