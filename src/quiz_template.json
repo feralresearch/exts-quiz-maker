@@ -1,0 +1,20 @@
+{
+  "fileName": "new-quiz.md",
+  "data": [
+    {
+      "type": "SingleChoiceQuizz",
+      "permanentId": "quiz-singlechoicequizz-0",
+      "json": {
+        "description_md": "NEW QUESTION",
+        "success_message_md": null,
+        "answers_attributes": [
+          {
+            "permanent_id": "answer-0",
+            "text_md": "NEW ANSWER",
+            "hint_md": ""
+          }
+        ]
+      }
+    }
+  ]
+}

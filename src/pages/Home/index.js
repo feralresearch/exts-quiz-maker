@@ -32,6 +32,21 @@ const Home = memo(() => {
     [quizData, setData]
   );
 
+  const onAdd = useCallback(
+    (object) => {
+      setData(quizDataHelper.add(quizData, object));
+    },
+    [quizData, setData]
+  );
+
+  const onDelete = useCallback(
+    (object) => {
+      if (window.confirm("Do you really want to delete?"))
+        setData(quizDataHelper.delete(quizData, object));
+    },
+    [quizData, setData]
+  );
+
   const setDataFromChild = useCallback(
     (data) => {
       const newData = { ...quizData };
@@ -148,6 +163,22 @@ const Home = memo(() => {
             </div>
           </div>
           <div className={styles.container}>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <div style={{ flexGrow: 1 }} />
+              <div>
+                <input
+                  value="Add"
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onAdd({
+                      action: "add",
+                      item: "question",
+                    });
+                  }}
+                />
+              </div>
+            </div>
             <div className={styles.innerContainer}>
               <div
                 style={{
@@ -159,7 +190,7 @@ const Home = memo(() => {
               >
                 <div className={styles.questionList}>
                   <div ref={drop} style={{ fontSize: "1rem" }}>
-                    {quizData.data.map((data, idx) => (
+                    {quizData.data.map((data) => (
                       <Question
                         onUpdateData={setDataFromChild}
                         key={data.permanentId
@@ -167,6 +198,8 @@ const Home = memo(() => {
                           .replace("multiple", "")}
                         data={data}
                         onChange={onChange}
+                        onAdd={onAdd}
+                        onDelete={onDelete}
                         moveQuizItem={moveQuizItem}
                         findQuizItem={findQuizItem}
                       />
@@ -190,7 +223,19 @@ const Home = memo(() => {
                 padding: "4rem",
               }}
             >
-              Drop a quiz .md file here to get started
+              Drop a quiz .md file here to get started or{" "}
+              <div
+                style={{ textDecoration: "underline" }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onAdd({
+                    action: "add",
+                    item: "question",
+                  });
+                }}
+              >
+                Create New
+              </div>
             </div>
           </div>
         </div>

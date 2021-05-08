@@ -4,7 +4,15 @@ import { DRAGGABLE } from "constants.js";
 import MDEditor from "components/MDEditor";
 import StatusToggle from "components/StatusToggle";
 
-const Answer = ({ parentId, data, onChange, moveAnswer, findAnswer }) => {
+const Answer = ({
+  parentId,
+  data,
+  onAdd,
+  onDelete,
+  onChange,
+  moveAnswer,
+  findAnswer,
+}) => {
   const originalIndex = findAnswer(data.permanent_id).index;
   const [{ isDragging }, drag] = useDrag(
     () => ({
@@ -42,18 +50,37 @@ const Answer = ({ parentId, data, onChange, moveAnswer, findAnswer }) => {
         opacity,
       }}
     >
-      <div style={{ textAlign: "right" }}>
-        <StatusToggle
-          parentId={parentId}
-          id={data.permanent_id}
-          name={"correct"}
-          value={data.correct}
-          onChange={onChange}
-          options={{
-            display: ["CORRECT", "INCORRECT"],
-            color: ["darkgreen", "red"],
-          }}
-        />
+      <div
+        style={{ textAlign: "right", display: "flex", alignItems: "center" }}
+      >
+        <div style={{ flexGrow: 1 }} />
+        <div style={{ marginRight: "1rem" }}>
+          <StatusToggle
+            parentId={parentId}
+            id={data.permanent_id}
+            name={"correct"}
+            value={data.correct}
+            onChange={onChange}
+            options={{
+              display: ["CORRECT", "INCORRECT"],
+              color: ["darkgreen", "red"],
+            }}
+          />
+        </div>
+        <div>
+          <input
+            value="Delete"
+            type="button"
+            onClick={() =>
+              onDelete({
+                action: "delete",
+                item: "answer",
+                parentId,
+                id: data.permanent_id,
+              })
+            }
+          />
+        </div>
       </div>
       <div>
         <MDEditor

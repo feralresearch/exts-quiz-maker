@@ -10,7 +10,15 @@ import Markdown from "react-universal-markdown/dom";
 import StatusToggle from "components/StatusToggle";
 
 const Question = memo(
-  ({ data, onChange, moveQuizItem, findQuizItem, onUpdateData }) => {
+  ({
+    data,
+    onDelete,
+    onAdd,
+    onChange,
+    moveQuizItem,
+    findQuizItem,
+    onUpdateData,
+  }) => {
     const originalIndex = findQuizItem(data.permanentId).index;
 
     const onChangeQuizType = (e) => {
@@ -85,17 +93,35 @@ const Question = memo(
         const allowMultiple = data.type === QUESTIONTYPE.MULTIPLE;
         contents.push(<div key={"title"}>Answers</div>);
         contents.push(
-          <div key={`${data.permanentId}_type`}>
-            <StatusToggle
-              id={data.permanentId}
-              name={"allowMultiple"}
-              value={allowMultiple}
-              onChange={onChangeQuizType}
-              options={{
-                display: ["ALLOW MULTIPLE: YES", "ALLOW MULTIPLE: NO"],
-                color: ["black", "black"],
-              }}
-            />
+          <div
+            key={`${data.permanentId}_type`}
+            style={{ display: "flex", flexDirection: "row" }}
+          >
+            <div style={{ flexGrow: 1 }}>
+              <StatusToggle
+                id={data.permanentId}
+                name={"allowMultiple"}
+                value={allowMultiple}
+                onChange={onChangeQuizType}
+                options={{
+                  display: ["ALLOW MULTIPLE: YES", "ALLOW MULTIPLE: NO"],
+                  color: ["black", "black"],
+                }}
+              />
+            </div>
+            <div>
+              <input
+                value="Add"
+                type="button"
+                onClick={() =>
+                  onAdd({
+                    action: "add",
+                    item: "answer",
+                    parentId: data.permanentId,
+                  })
+                }
+              />
+            </div>
           </div>
         );
         data.json["answers_attributes"].forEach((answer) => {
@@ -107,6 +133,8 @@ const Question = memo(
               parentId={data.permanentId}
               data={answer}
               onChange={onChange}
+              onDelete={onDelete}
+              onAdd={onAdd}
               allowMultiple={allowMultiple}
             />
           );
@@ -134,7 +162,37 @@ const Question = memo(
           opacity,
         }}
       >
-        <Collapsable title={<Markdown>{data.json.description_md}</Markdown>}>
+        <Collapsable
+          title={
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                width: "100%",
+              }}
+            >
+              <div>
+                <Markdown>{data.json.description_md}</Markdown>
+              </div>
+              <div style={{ flexGrow: 1 }} />
+              <div>
+                <input
+                  value="Delete"
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDelete({
+                      action: "delete",
+                      item: "question",
+                      id: data.permanentId,
+                    });
+                  }}
+                />
+              </div>
+            </div>
+          }
+        >
           <div className={styles.answerBlock}>{contents}</div>
         </Collapsable>
       </div>
