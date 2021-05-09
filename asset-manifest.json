@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/exts-quiz-maker/static/css/main.48519be4.chunk.css",
-    "main.js": "/exts-quiz-maker/static/js/main.2676bb44.chunk.js",
-    "main.js.map": "/exts-quiz-maker/static/js/main.2676bb44.chunk.js.map",
+    "main.css": "/exts-quiz-maker/static/css/main.fd7ddc9e.chunk.css",
+    "main.js": "/exts-quiz-maker/static/js/main.3f47e4ee.chunk.js",
+    "main.js.map": "/exts-quiz-maker/static/js/main.3f47e4ee.chunk.js.map",
     "runtime-main.js": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js",
     "runtime-main.js.map": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js.map",
     "static/js/2.991114e8.chunk.js": "/exts-quiz-maker/static/js/2.991114e8.chunk.js",
     "static/js/2.991114e8.chunk.js.map": "/exts-quiz-maker/static/js/2.991114e8.chunk.js.map",
     "index.html": "/exts-quiz-maker/index.html",
-    "static/css/main.48519be4.chunk.css.map": "/exts-quiz-maker/static/css/main.48519be4.chunk.css.map",
+    "static/css/main.fd7ddc9e.chunk.css.map": "/exts-quiz-maker/static/css/main.fd7ddc9e.chunk.css.map",
     "static/js/2.991114e8.chunk.js.LICENSE.txt": "/exts-quiz-maker/static/js/2.991114e8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09ee3cdd.js",
     "static/js/2.991114e8.chunk.js",
-    "static/css/main.48519be4.chunk.css",
-    "static/js/main.2676bb44.chunk.js"
+    "static/css/main.fd7ddc9e.chunk.css",
+    "static/js/main.3f47e4ee.chunk.js"
   ]
 }
