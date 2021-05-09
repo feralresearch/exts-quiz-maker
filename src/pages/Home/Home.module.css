@@ -24,6 +24,7 @@
 .questionList {
   position: absolute;
   overflow: scroll;
+  width: 100%;
 }
 
 .input {
