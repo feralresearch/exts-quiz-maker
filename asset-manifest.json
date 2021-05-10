@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/exts-quiz-maker/static/css/main.fd7ddc9e.chunk.css",
-    "main.js": "/exts-quiz-maker/static/js/main.3f47e4ee.chunk.js",
-    "main.js.map": "/exts-quiz-maker/static/js/main.3f47e4ee.chunk.js.map",
+    "main.js": "/exts-quiz-maker/static/js/main.e60062c9.chunk.js",
+    "main.js.map": "/exts-quiz-maker/static/js/main.e60062c9.chunk.js.map",
     "runtime-main.js": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js",
     "runtime-main.js.map": "/exts-quiz-maker/static/js/runtime-main.09ee3cdd.js.map",
     "static/js/2.991114e8.chunk.js": "/exts-quiz-maker/static/js/2.991114e8.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.09ee3cdd.js",
     "static/js/2.991114e8.chunk.js",
     "static/css/main.fd7ddc9e.chunk.css",
-    "static/js/main.3f47e4ee.chunk.js"
+    "static/js/main.e60062c9.chunk.js"
   ]
 }
