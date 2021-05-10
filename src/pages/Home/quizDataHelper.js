@@ -73,9 +73,9 @@ const quizDataHelper = {
     });
 
     // EXTS format per @ben:
+    outputAsString = outputAsString.replace(/(\r\n|\n|\r)/gm, " ");
     if (legacyFormat) {
       //Strip all linefeeds
-      outputAsString = outputAsString.replace(/(\r\n|\n|\r)/gm, "");
       //Convert single quotes to double
       outputAsString = outputAsString.replaceAll("'", '"');
     }
